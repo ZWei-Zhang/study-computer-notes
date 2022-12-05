@@ -7,3 +7,15 @@
 
 ## 
 ![antd表格render](images/antd%E8%A1%A8%E6%A0%BCrender.jpg)
+
+触发Form表单校验的方式：
+1. 前提：提交按钮包裹在`<Form>`中，并且htmlType='submit'
+   点击这个按钮，会自动触发Form的表单校验
+   表单校验通过，会执行 `<Form onFinish={函数}>` 事件
+       函数执行，形参获取的就是表单收集的信息
+2. 我们获取Form组建的实例「或者是子组件内部返回的方法」
+   基于这些方法，触发表单校验 & 获取表单手机的信息等
+   + validateFields
+   + getFieldsValue
+   + resetFields
+   + ….
